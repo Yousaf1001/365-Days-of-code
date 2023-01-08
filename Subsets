@@ -1,0 +1,22 @@
+class Solution {
+public:
+    vector<vector<int>> helper(int index,vector<vector<int>> & original, vector<int>& ds,vector<int>&num,int size)
+    {
+        if(index==size)
+        {
+            original.push_back(ds);
+            return original;
+        }
+        ds.push_back(num[index]);
+        original=helper(index+1,original,ds,num,size);
+        ds.pop_back();
+        original=helper(index+1,original,ds,num,size);
+        return original;
+    }
+    vector<vector<int>> subsets(vector<int>& nums) {
+        vector<vector<int>>original;
+        vector<int>ds;
+        original=helper(0,original,ds,nums,nums.size());
+        return original;
+    }
+};
