@@ -1,8 +1,17 @@
 ###############Sort Function Explaination#######################
-The sort function is the main function that uses the sortedAccordingPosition function to sort the stack. It recursively calls itself until the stack is empty. In each recursive call, it pops an element from the stack into a temporary variable temp and recursively calls itself to sort the remaining elements of the stack. Once the remaining elements are sorted, it calls the sortedAccordingPosition function to insert the temp element into the stack in a sorted order. This process continues until all the elements are sorted and pushed back into the stack.
+The sort function is the main function that uses the sortedAccordingPosition function to sort the stack. It recursively calls itself until the stack is empty.
+In each recursive call, it pops an element from the stack into a temporary variable temp and recursively calls itself to sort the remaining elements of the stack.
+Once the remaining elements are sorted, it calls the sortedAccordingPosition function to insert the temp element into the stack in a sorted order. 
+This process continues until all the elements are sorted and pushed back into the stack.
 
 ##############SortAccordingPosition function Explaination############
-The sortedAccordingPosition function is a recursive function that takes a stack and an integer temp as input. It checks if the given stack is empty or the top element of the stack is smaller than or equal to the temp integer. If either of the conditions is true, it pushes the temp integer onto the stack and returns. Otherwise, it recursively calls the function after popping the top element of the stack into a temporary variable temporary. This continues until either the stack is empty or the top element is smaller than or equal to temp. Once the condition is satisfied, it pushes the temp integer onto the stack and returns. This function helps to maintain the sorted order of the elements in the stack.
+The sortedAccordingPosition function is a recursive function that takes a stack and an integer temp as input. It checks if the given stack is empty or the top
+element of the stack is smaller than or equal to the temp integer. If either of the conditions is true, it pushes the temp integer onto the stack and returns.
+Otherwise, it recursively calls the function after popping the top element of the stack into a temporary variable temporary. This continues until either the stack is 
+empty or the top element is smaller than or equal to temp. Once the condition is satisfied, it pushes the temp integer onto the stack and returns. This function 
+helps to maintain the sorted order of the elements in the stack.
 
 ##############Time and Space Complexity ######################
-Overall, the approach has a time complexity of O(n^2) in the worst case scenario, where n is the number of elements in the stack. This is because each element is being compared with all the other elements in the stack during the sorting process. The space complexity is O(n) as it uses an auxiliary stack to store the sorted elements.
+Overall, the approach has a time complexity of O(n^2) in the worst case scenario, where n is the number of elements in the stack. 
+This is because each element is being compared with all the other elements in the stack during the sorting process. 
+The space complexity is O(n) as it uses an auxiliary stack to store the sorted elements.
