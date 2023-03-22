@@ -1,0 +1,38 @@
+Sure! Here's a step-by-step explanation of the code:
+1)The code starts by defining a constant long long integer named modulo and initializes 
+it to 1000000007. This is a prime number commonly used in competitive programming problems
+to avoid integer overflow.
+2)The code defines a recursive function named countGoodNumbersHelper that takes two long 
+long integers num and power as input and returns a long long integer. This function
+calculates the power of the given number using the binary exponentiation method with
+modular arithmetic to avoid integer overflow.
+3)Inside the countGoodNumbersHelper function, there are three conditional statements:
+The first conditional statement checks if the power is equal to zero. If it is,
+the function returns 1, since any number raised to the power of zero is equal to 1.
+The second conditional statement checks if the power is equal to one. If it is,
+the function returns num, since any number raised to the power of one is equal
+to itself.The third conditional statement runs if neither of the first two conditions is 
+met. This calculates the power of the given number using the binary exponentiation method,
+which involves calculating the square of the number repeatedly until the power is reached.
+If the power is odd, the function multiplies the result by num and takes the modulo to 
+avoid integer overflow.
+4)The countGoodNumbers function takes a single long long integer n as input and returns an
+ integer that represents the number of good numbers between 1 and 10^n inclusive.
+5)Inside the countGoodNumbers function, two long long integers oddNum and evenNum are 
+calculated, representing the number of odd (5's) and even (4's) digits between 1 and 
+10^n inclusive.
+6)The countGoodNumbers function uses the countGoodNumbersHelper function to calculate the
+power of 5 and 4, based on the number of odd and even digits calculated earlier. 
+It multiplies these two powers and takes the modulo using the modulo constant defined 
+earlier to avoid integer overflow.
+7)Finally, the countGoodNumbers function returns the calculated product, which represents
+the number of good numbers between 1 and 10^n inclusive.
+
+##############################Time and Space Complexity########################
+The time complexity of the countGoodNumbers function is O(log n), where n is the input number. This is because the function calls the countGoodNumbersHelper function recursively, and each recursive call reduces the input size by half.
+
+The countGoodNumbersHelper function also has a time complexity of O(log n) since it recursively calculates the power of the given number using the divide-and-conquer approach.
+
+The space complexity of the countGoodNumbers function is O(1) since it uses only a few variables to store the input and intermediate results, and they do not depend on the input size.
+
+The countGoodNumbersHelper function has a space complexity of O(log n) since it uses the call stack to store intermediate results during the recursive calls, and the maximum depth of the call stack is log n.
