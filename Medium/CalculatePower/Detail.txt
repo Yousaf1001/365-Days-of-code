@@ -1,0 +1,21 @@
+Approach 
+1)fellow approach of devide and conquer ,Binary search.
+2)Solve by using recursion.
+3)Two edges cases (n==0 and n==1).
+###########################Algorithem##########################
+1)First check is n is negative.If negative makes it postive.
+2)Called powhelper function pass number and power as a argument.
+3)Check is n==0 then return 1 and if n ==1 then return number 
+4) Now check whether n is even or odd.
+5)if even then multiply (result *result) and recursive call pow function by using x and n/2 as argurmenet.
+6) what is n/2? ans: we simply devide the given power by 2 and pass it.
+7) if odd then multiply (result * result * x ) and recursive call pow function by using x and n/2 as argument.
+8) Now after calculating power and return it.
+9) we check it in main function,is n is negative,if negative then return (1/result) and else simply
+result.
+
+###########Time Complexity : log(n)##############
+###########Space complexity :log(n)##############
+
+##########Note###################
+There are many other approach,for detail check leetcode problem  50. Pow(x, n).
