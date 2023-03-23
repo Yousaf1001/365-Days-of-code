@@ -1,0 +1,17 @@
+###################Approach First####################
+1)Similiar to sort a stack But one diffrent here helper function functionality is insert
+element at bottom.
+
+##############Time and Space complexity##############
+Time Complexity: 0(n^2)
+Space Complexity:0(n)
+
+###############Approach Second#######################
+1)in the reverseStack function, we create an auxiliary stack auxStack and iterate through the original stack s.
+2)In each iteration, we pop an element from s, and push it onto auxStack.This effectively reverses the order of elements in s.
+3)we assign auxStack to s to update the original stack with the reversed order of elements.
+
+##############Time and Space complexity##############
+time complexity of this approach is O(n), where n is the number of elements in the stack. 
+The space complexity is also O(n) because we create an auxiliary stack to store the reversed elements.
+
