@@ -1,0 +1,30 @@
+#####################Approach#####################
+The given code uses a backtracking algorithm to generate all valid combinations of n pairs of parentheses. 
+The backtracking algorithm is a general algorithmic technique that involves exploring all possible solutions to a problem by incrementally building candidates to the solutions,
+and discarding a candidate as soon as it is determined that the candidate cannot possibly be completed to a valid solution.
+
+##################Algroithem##################
+1)we start with an empty string curr and two counters open and close initialized to zero.
+We then recursively build candidates to the solution by considering two possible choices at each position:
+2)We can place an opening bracket if the number of opening brackets placed so far is less than n. 
+We make a recursive call by incrementing the open counter and appending an opening bracket to the current string.
+3)We can place a closing bracket if the number of closing brackets placed so far is less than the number of opening brackets placed so far.
+We make a recursive call by incrementing the close counter and appending a closing bracket to the current string.
+4)We continue this process until we have placed 2*n brackets in total.
+ At this point, we have generated a valid combination of n pairs of parentheses, 
+ and we add it to the ans vector.
+
+
+
+#################Time and Space Complexity#################
+Time complexity:
+For each position, we have two choices to make: either we can place an opening bracket or a closing bracket. 
+So at each position, we have two recursive calls. The number of such positions is 2*n. 
+Therefore, the time complexity of the given code is O(2^(2n)).
+
+Space complexity:
+The space complexity of the given code depends on the maximum depth of the recursion stack. 
+The maximum depth of the recursion stack is equal to the maximum number of opening brackets that we can place before placing any closing bracket. 
+This value is n. Therefore, the space complexity of the given code is O(n).
+
+So, the time complexity of the given code is exponential in n, whereas the space complexity is linear in n.
