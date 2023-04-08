@@ -1,8 +1,8 @@
 You should Clearly Know about these Questions
 1) What is the extra space use by your algorithem?
-in case of brute force extra space has not used by our algorithem.
+in case of  Optimization approach extra space has not used by our algorithem.
 2) What is the space use by your algorithem?
-in case of brute force space has used by our algorithem is bigo(n)
+in case of Optimization approach space has used by our algorithem is bigo(n)
 
 
 
