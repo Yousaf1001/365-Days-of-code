@@ -1,5 +1,6 @@
 Problem has been solved in three ways.
 But this problem have only two solution.
+
 1)Brute force solution:
 explaination:
 `  4) First make new array and put all the non zero element in it.
@@ -16,6 +17,8 @@ Code:
 Visit websites
 Web_URL:https://takeuforward.org/data-structure/move-all-zeros-to-the-end-of-the-array/
 
+
+(Note Two pointer approach)
 1)Optimization approach:
 explaination:
 `  1) First find zero element in the zero.Store it index in variable.
@@ -23,6 +26,7 @@ explaination:
    3)else if yes,Then start traversing original Array from (zeroIndex+1).
    4)Why we use (zeroIndex+1).becuase we know that  zero element start from zeroIndex .We can find no zero element from  (zeroIndex+1) onward.  for which i want to update.
    5) Now start traversing.In traversing when ever i find nonzero simply swap it with zeroIndex element and move zeroIndex one index ahead.
+
 
    
    #### Time and space complexity 
