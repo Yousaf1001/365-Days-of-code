@@ -2,7 +2,7 @@ There are only optimle Approach to solve  this problem
 1)Optimization solution:
 explaination:
    1)Iterates array from right to left.
-   2) Check is  nums[i]< nums[i-1].if it is not. Then return false and terminates loop.
+   2) Check is  nums[i]< nums[i-1].Then return false and terminates loop.
    3) it's means ,array did not sort.
    4) if yes then return true;
 
