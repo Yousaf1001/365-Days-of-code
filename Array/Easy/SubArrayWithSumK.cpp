@@ -7,10 +7,28 @@ explaination:
    4)Return length of largest of subArrays.
    #### Time and space complexity 
    time complexity : O(N*N*N)
+   space complexity:O(1)
    after some modification its becomes:
-   O(N*N*)
+   O(N*N)
    space complexity:O(1)
 
+Codd:
+    int subarraySum(vector<int>& nums, int k) {
+        if(nums.size()==0)
+            return -1;
+        int length=0;
+        for(int i=0;i<nums.size();i++)
+        {
+            int sum=0;
+            for(int j=i;j<nums.size();j++)
+            {
+                sum+=nums[j];
+                if(sum==k)
+                  length=max(length,(j-i)+1);
+            }
+        }
+        return length;
+    }
 2)Better Solution:
 we use reverse Math and hashing in better solution.
 explaination:
