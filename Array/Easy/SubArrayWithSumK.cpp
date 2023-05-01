@@ -50,6 +50,7 @@ Note:Edge case:
 
 3)optimization Solution:
     Two Pointer approach is used to solve problem.
+    Note:(optimle solution for Array have positive and zero element).
 explaination:
    1)Move first pointer on right side.It's means sum is also increase.
    2)When sum is larger then k.
