@@ -29,6 +29,7 @@ Codd:
         }
         return length;
     }
+//I dont' Code better solution till now.Because, My desire  to first Understand hashig concept.Then later,solve it.
 2)Better Solution:
 we use reverse Math and hashing in better solution.
 explaination:
@@ -48,13 +49,34 @@ Note:Edge case:
    space complexity:O(1)
 
 3)optimization Solution:
+    Two Pointer approach is used to solve problem.
 explaination:
-   1)first condition: we first find element largest then arr[i] element,if yes then  largest =arr[i].
-   2)But before assign new number to largest.it already have a number  that are largest then previous number but less then this arr[i] number.
-   3) it's means it's secondlargest.
-   4)second condition:if  arr[i] larger then secondLargest but less then Largest.it's means to say it's we assign secondLargest=arr[i]
-   5) second condition also handle duplicate largest number exception.
-
-   #### Time and space complexity 
-   time complexity : O(n)
+   1)Move first pointer on right side.It's means sum is also increase.
+   2)When sum is larger then k.
+   3) Then trim array  from back and move second pointer on right side till sum becomse less then k or j<sizeOfArray.
+   4)along with all this,Check when sum is equal to k.
+   5)Find length(i-j+1) and compare already store value of length in length variable.
+   6)Update length variable on the basis of largest length values.
+   #### Time and space complexity.
+code:
+    int subarraySum(vector<int>& nums, int k) {
+        if(nums.size()==0)
+            return -1;
+        int maxLen=0;
+        int sum=0;
+        int left=0;
+        for(int right=0;right<nums.size();right++)
+        {
+            sum=sum+nums[right];
+            while(sum>k && left<=right)
+            {
+                sum=sum-nums[left];
+                left++;
+            }  
+            if(sum==k)
+               maxLen=max(maxLen,right-left+1);
+        }
+        return maxLen;
+    }
+   time complexity : O(2N)
    space complexity:O(1)
